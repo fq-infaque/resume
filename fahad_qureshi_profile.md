@@ -2,7 +2,7 @@
 
 ## Contact Information
 
-- **Location:** 43 Rockport Drive, Toronto M1C 5B9, Canada
+- **Location:** 3217 Meadow Marsh Crescent, Oakville, ON L6H 0T6, Canada
 - **Phone:** 647-886-7147
 - **Email:** fahadq@gmail.com
 - **LinkedIn:** linkedin.com/in/qureshifahad
