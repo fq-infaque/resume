@@ -11,7 +11,7 @@
 
 ## Professional Summary
 
-Engineering and strategy executive with 18+ years leading enterprise-wide technology transformation, governance, and portfolio execution across financial services, insurance, and SaaS. Started as a Java developer and rose through progressively senior roles at BMO and RBC before founding multiple ventures. Currently Practice Lead at Quantible, designing production-grade multi-agent AI systems for enterprise clients. Proven track record aligning engineering execution with business goals, driving AI/LLM-enabled innovation, and scaling globally distributed teams. Expert in multi-agent orchestration (LangGraph, A2A), multi-cloud infrastructure (Azure, AWS, GCP), DevOps, cybersecurity, CI/CD, portfolio governance, and coaching technical leaders in remote-first environments. Successfully established and managed an offshore company enabling organizations to reduce development costs by 70%.
+Engineering and strategy executive with 18+ years leading enterprise-wide technology transformation, governance, and portfolio execution across financial services, insurance, and SaaS. Started as a Java developer and rose through progressively senior roles at BMO and RBC before founding multiple ventures. Currently an Independent Consultant, designing production-grade multi-agent AI systems and HR-technology platforms for enterprise clients. Proven track record aligning engineering execution with business goals, driving AI/LLM-enabled innovation, and scaling globally distributed teams. Expert in multi-agent orchestration (LangGraph, A2A), multi-cloud infrastructure (Azure, AWS, GCP), DevOps, cybersecurity, CI/CD, portfolio governance, and coaching technical leaders in remote-first environments. Successfully established and managed an offshore company enabling organizations to reduce development costs by 70%.
 
 ---
 
@@ -48,6 +48,7 @@ Engineering and strategy executive with 18+ years leading enterprise-wide techno
 - Insurance (fraud prevention, enterprise tech services)
 - Regulatory compliance and governance
 - Non-profit SaaS
+- HR technology (culture-fit assessment, psycholinguistic analysis, voice agents)
 - Financial planning & controls
 - IT budgeting and executive reporting
 
@@ -55,21 +56,29 @@ Engineering and strategy executive with 18+ years leading enterprise-wide techno
 
 ## Work Experience
 
-### Practice Lead, AI Agents — Quantible
+### Independent Consultant
 **06/2026 – Present | Toronto, Canada**
 
-Quantible is a consultancy that helps enterprises design, build, and deploy production-grade AI agent systems. As Practice Lead, Fahad leads client engagements end-to-end — from discovery and architecture through prototyping and delivery.
+Independent technology consultant advising enterprise clients (client names withheld) on AI strategy, production multi-agent systems, and HR technology — leading engagements end-to-end from discovery and architecture through prototyping, delivery, and production operations.
 
+**AI agents & automation**
 - Led multi-agent system architecture for a large enterprise client: designed a production-grade orchestration layer using LangGraph, A2A protocol, and OPA policy-as-code with a three-plane architecture and single-guarded-door security model
-- Built 3 working prototypes proving the architecture before commit — including a LangGraph + HITL prototype and a psycholinguistic pipeline analyzing real call recordings
+- Built 3 working prototypes proving the architecture before commit — including a LangGraph + human-in-the-loop prototype and a psycholinguistic pipeline analyzing real call recordings
 - Designed and built AI agents from scratch for intercompany financial reconciliation using Azure AI Foundry and Logic Apps, automating complex reconciliation workflows
+- Back-test agents against historical data before release; design guardrails (policy-as-code, human-in-the-loop, shadow-mode rollouts, guardrail metrics) and monitor/track agents in production
+- Update client operating procedures to reflect the new AI reality; build feedback loops so agents improve over time
 - Conducted a 180-day stockout audit across 68,041 records, identifying $510K in lost commissions
 - Built per-use-case financial models totaling ~$2.8M/yr benefit against a $250K build cost (11× first-year return)
 - Scored 5 platform decisions against 6 weighted criteria (LangGraph 4.85/5, A2A 4.85/5, OPA 5.00/5); designed HITL architecture, shadow-mode rollout, and guardrail metrics
-- Authored the Quantible AI Agent Engagement Playbook — a 10-step repeatable methodology now institutional IP for the firm
-- Delivered 21 client meetings including onsite visit (Fort Belvoir), mapped 5 business domains end to end with stakeholders from VP to store DM
+- Authored a 10-step AI Agent Engagement Playbook — a repeatable methodology now institutional IP
+- Delivered 21 client meetings including onsite visits, mapped 5 business domains end to end with stakeholders from VP to store DM
 - Produced 20+ written deliverables: use case analysis, orchestration design, platform design templates, engagement playbook, and financial models
 - **Tech:** LangGraph, A2A, OPA, Azure AI Foundry, Logic Apps, LLMs, Multi-Agent Architecture, HITL, Python
+
+**HR consulting — Egility**
+- Built Egility, an organizational culture assessment platform: candidates complete open-ended questionnaires (web or phone); responses are analyzed with psycholinguistic NLP (Receptiviti API) and scored for culture fit against the organization's culture-carrier profile, with gap analysis and comparative analytics
+- Introduced an AI voice agent (VAPI, GPT-5.2, Deepgram speech-to-text) that conducts survey interviews by phone — authenticates callers, reads questions aloud, captures spoken answers
+- Platform: React 17 + Redux frontend; Firebase backend (Firestore, Cloud Functions gen2, Hosting, Auth, Storage); 4 deployment environments; Playwright/Cucumber/Jest testing
 
 ### CTO and Chief Product Owner — Prodago.com
 **07/2022 – 06/2026 | Montreal, Canada**
@@ -247,7 +256,7 @@ Started career at BMO as an individual contributor, building deep expertise in F
 
 | Period | Role | Company | Location |
 |--------|------|---------|----------|
-| 06/2026 – Present | Practice Lead, AI Agents | Quantible | Toronto |
+| 06/2026 – Present | Independent Consultant | Independent | Toronto |
 | 07/2022 – 06/2026 | CTO & Chief Product Owner | Prodago.com | Montreal, Canada |
 | 01/2021 – Present | Founder & CTO | Infaque | Toronto / Lahore |
 | 01/2024 – 06/2025 | Enterprise Consultant | Manulife | Toronto |
