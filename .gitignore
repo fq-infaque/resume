@@ -1,0 +1,11 @@
+# Google service account credentials
+client_secret_*.json
+
+# Python virtual environment
+.venv/
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
