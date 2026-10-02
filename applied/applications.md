@@ -17,4 +17,4 @@ PDF used for that application stored alongside.
 
 | Date | Company | Role | Location | Pay research | CV used | Job link | Status | Notes |
 |------|---------|------|----------|--------------|---------|----------|--------|-------|
-| _—_ | _—_ | _—_ | _—_ | _—_ | _—_ | _—_ | _—_ | _No applications yet._ |
+| 2026-10-02 | Stealth (digital-asset market maker, Series C) | Deputy CTO | GTA, remote/hybrid | Not listed | [cv.pdf](2026-10-02-stealth-deputy-cto/cv.pdf) | https://www.linkedin.com/jobs/view/4470573683/ | Submitted | LinkedIn Easy Apply; confirmation "Your application was sent to Stealth!"; no reference ID. Screening: CTO-eq Yes, trading-firm exp No, 50–150 team Yes, strategic stakeholders Yes. |
