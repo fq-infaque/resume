@@ -17,4 +17,5 @@ PDF used for that application stored alongside.
 
 | Date | Company | Role | Location | Pay research | CV used | Job link | Status | Notes |
 |------|---------|------|----------|--------------|---------|----------|--------|-------|
+| 2026-10-04 | Toptal | CTO | Remote, Canada | Not published (est. CA$220K–320K, low confidence) | [cv.pdf](2026-10-04-toptal-cto/cv.pdf) | https://www.linkedin.com/jobs/view/4467429518/ | Submitted | Applied via toptal.com/careers; confirmation "Thank you for applying to Toptal! Your application has been successfully submitted."; no reference ID. Free-text answers drafted from profile per Fahad's authorization; reCAPTCHA cleared via his browser takeover. |
 | 2026-10-02 | Stealth (digital-asset market maker, Series C) | Deputy CTO | GTA, remote/hybrid | Not listed | [cv.pdf](2026-10-02-stealth-deputy-cto/cv.pdf) | https://www.linkedin.com/jobs/view/4470573683/ | Submitted | LinkedIn Easy Apply; confirmation "Your application was sent to Stealth!"; no reference ID. Screening: CTO-eq Yes, trading-firm exp No, 50–150 team Yes, strategic stakeholders Yes. |

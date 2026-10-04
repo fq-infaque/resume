@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fahad Qureshi — Resume</title>
+<style>
+  @page { size: Letter; margin: 0; }
+  * { box-sizing: border-box; print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+  html, body { margin: 0; padding: 0; }
+  body { font-family: 'Liberation Sans', 'Noto Sans', sans-serif; color: #2b2b2b; }
+
+  .page {
+    width: 8.5in; min-height: 11in;
+    padding: 0.5in 0.6in 0.75in 0.6in;
+    position: relative;
+    display: flow-root;
+  }
+  .footer {
+    position: absolute; bottom: 0.32in; left: 0; right: 0;
+    text-align: center; font-size: 9pt; color: #6E9BB3; font-weight: 700;
+  }
+
+  /* Two-column rows: narrow right-aligned sidebar + content */
+  .row { display: grid; grid-template-columns: 1.32in 1fr; column-gap: 0.16in; margin-bottom: 0.10in; }
+  .side {
+    text-align: right; font-weight: 700; color: #7CA9BE;
+    font-size: 10pt; line-height: 1.3; padding-top: 3pt;
+  }
+  .main { border-top: 1.5pt solid #4A7C8F; padding-top: 5pt; min-width: 0; }
+
+  h1.name {
+    font-size: 21pt; font-weight: 700; color: #3F5D6E;
+    margin: 0 0 4pt 0; letter-spacing: 0.01em;
+  }
+  .contact { font-size: 9pt; color: #555; line-height: 1.7; }
+  .contact .sep { color: #999; padding: 0 5pt; }
+  .contact .ci { white-space: nowrap; }
+
+  .profile p { font-size: 9pt; line-height: 1.4; margin: 0; color: #2b2b2b; }
+
+  /* Roles are atomic: never split across pages */
+  .role { break-inside: avoid; page-break-inside: avoid; margin: 0 0 6pt 0; display: flow-root; }
+  .role:last-child { margin-bottom: 2pt; }
+  .role h3 { font-size: 11.5pt; font-weight: 700; color: #111; margin: 0; line-height: 1.25; }
+  .role .company { font-size: 10.5pt; font-weight: 700; color: #111; margin: 0; line-height: 1.3; }
+  .role .dateline {
+    font-size: 8.5pt; font-weight: 700; color: #6E9BB3;
+    letter-spacing: 0.05em; margin: 2pt 0 3pt 0; text-transform: uppercase;
+  }
+  .role ul { margin: 0; padding: 0; list-style: none; }
+  .role li {
+    font-size: 9pt; line-height: 1.32; color: #2b2b2b;
+    padding-left: 10pt; text-indent: -10pt; margin: 0 0 2pt 0;
+  }
+  .role li::before { content: "\2022\00a0"; }
+
+  .edu { break-inside: avoid; page-break-inside: avoid; margin: 0 0 7pt 0; }
+  .edu:last-child { margin-bottom: 2pt; }
+  .edu h3 { font-size: 10.5pt; font-weight: 700; color: #111; margin: 0; line-height: 1.3; }
+  .edu .school { font-size: 10pt; font-weight: 700; color: #111; margin: 0; }
+  .edu .dateline { font-size: 8.5pt; font-weight: 700; color: #6E9BB3; letter-spacing: 0.05em; margin: 2pt 0 0 0; text-transform: uppercase; }
+
+  .cert { break-inside: avoid; page-break-inside: avoid; margin: 0 0 5pt 0; }
+  .cert:last-child { margin-bottom: 2pt; }
+  .cert h3 { font-size: 10pt; font-weight: 700; color: #111; margin: 0; line-height: 1.3; }
+  .cert .org { font-size: 9.5pt; font-weight: 700; color: #111; margin: 0; }
+
+  /* Inline SVG icons (data URIs, baked colors) */
+  .ic {
+    display: inline-block; width: 10pt; height: 10pt;
+    background-size: contain; background-repeat: no-repeat; background-position: center;
+    vertical-align: -1.5pt; margin-right: 3pt;
+  }
+  .ic-pin-g { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M8 1.6a4.4 4.4 0 0 0-4.4 4.4C3.6 9.3 8 14.4 8 14.4s4.4-5.1 4.4-8.4A4.4 4.4 0 0 0 8 1.6z' fill='none' stroke='%235a5a5a' stroke-width='1.5'/%3E%3Ccircle cx='8' cy='6' r='1.7' fill='%235a5a5a'/%3E%3C/svg%3E"); }
+  .ic-phone { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M3.5 2h2.6l1.2 3.2-1.7 1.3c.5 1.4 1.6 2.5 3 3l1.3-1.7 3.2 1.2v2.6c0 .8-.7 1.5-1.5 1.4C6.9 12.6 3.4 9.1 3 4.4c0-.8.6-2.4.5-2.4z' fill='none' stroke='%235a5a5a' stroke-width='1.4' stroke-linejoin='round'/%3E%3C/svg%3E"); }
+  .ic-mail { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect x='1.8' y='3.4' width='12.4' height='9.2' rx='1' fill='none' stroke='%235a5a5a' stroke-width='1.4'/%3E%3Cpath d='M2.5 4.2 8 8.8l5.5-4.6' fill='none' stroke='%235a5a5a' stroke-width='1.4'/%3E%3C/svg%3E"); }
+  .ic-globe { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Ccircle cx='8' cy='8' r='6.2' fill='none' stroke='%235a5a5a' stroke-width='1.4'/%3E%3Cpath d='M1.8 8h12.4M8 1.8c-3.6 3.4-3.6 9 0 12.4M8 1.8c3.6 3.4 3.6 9 0 12.4' fill='none' stroke='%235a5a5a' stroke-width='1.1'/%3E%3C/svg%3E"); }
+  .ic-cal { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect x='2' y='3' width='12' height='10.5' rx='1' fill='none' stroke='%236E9BB3' stroke-width='1.4'/%3E%3Cpath d='M2 6.4h12M5.4 1.6V4M10.6 1.6V4' stroke='%236E9BB3' stroke-width='1.4'/%3E%3C/svg%3E"); }
+  .ic-pin-b { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M8 1.6a4.4 4.4 0 0 0-4.4 4.4C3.6 9.3 8 14.4 8 14.4s4.4-5.1 4.4-8.4A4.4 4.4 0 0 0 8 1.6z' fill='none' stroke='%236E9BB3' stroke-width='1.5'/%3E%3Ccircle cx='8' cy='6' r='1.7' fill='%236E9BB3'/%3E%3C/svg%3E"); }
+</style>
+</head>
+<body>
+
+<!-- ==================== PAGE 1 ==================== -->
+<div class="page">
+  <div class="row">
+    <div class="side">Personal<br>Information</div>
+    <div class="main">
+      <h1 class="name">Fahad Qureshi</h1>
+      <div class="contact">
+        <span class="ci"><span class="ic ic-pin-g"></span>3217 Meadow Marsh Crescent, Oakville, ON L6H 0T6, Canada</span><br>
+        <span class="ci"><span class="ic ic-phone"></span>647-886-7147</span>
+        <span class="sep">|</span><span class="ci"><span class="ic ic-mail"></span>fahadq@gmail.com</span><br>
+        <span class="ci"><span class="ic ic-globe"></span>linkedin.com/in/qureshifahad</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="side">Profile</div>
+    <div class="main profile">
+      <p>CTO-calibre engineering executive with 18+ years across financial services, insurance, and SaaS. Rose from Java developer to Head of FX Technology at BMO and Director at RBC, then founder/CTO of two ventures built from scratch. As CTO &amp; Chief Product Owner of Prodago, owned the full technical architecture of LLM and multi-agent AI systems and pioneered AI-first development. Currently an Independent Consultant designing production-grade agentic systems (LangGraph, A2A, OPA) for enterprise clients.</p>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="side">Work<br>Experience</div>
+    <div class="main">
+      <div class="role">
+        <h3>Independent Consultant</h3>
+        <p class="company">Self-employed</p>
+        <p class="dateline"><span class="ic ic-cal"></span>06/2026 &ndash; Present <span class="ic ic-pin-b"></span>Toronto, Canada</p>
+        <ul>
+          <li>Independent consultant: own technical architecture for production-grade multi-agent AI systems (LangGraph, A2A, OPA) &mdash; back-testing, guardrails, human-in-the-loop, production monitoring</li>
+          <li>Built AI agents from scratch for intercompany reconciliation (Azure AI Foundry, Logic Apps); 3 prototypes incl. a LangGraph pipeline on real call recordings</li>
+          <li>Financial models showed ~$2.8M/yr benefit on a $250K build (11x); authored a 10-step AI Agent Engagement Playbook (institutional IP)</li>
+          <li>Built Egility, a culture-fit platform using psycholinguistic NLP, with an AI voice agent for phone surveys</li>
+        </ul>
+      </div>
+      <div class="role">
+        <h3>CTO and Chief Product Owner</h3>
+        <p class="company">Prodago.com</p>
+        <p class="dateline"><span class="ic ic-cal"></span>07/2022 &ndash; 06/2026 <span class="ic ic-pin-b"></span>Montreal, Canada</p>
+        <ul>
+          <li>As CTO, owned the full technical architecture of an AI governance platform; built the engineering team from scratch, $0 to $200K+ ARR</li>
+          <li>Launched an LLM-powered product (LangChain agents) operationalizing compliance frameworks: ISO 42001, NIST AI RMF, EU AI Act</li>
+          <li>Pioneered AI-first development with Claude Code across the entire team; built agentic intake workflows and Azure AI Foundry + Logic Apps agent pipelines</li>
+          <li>Led global team on cloud-native Azure infrastructure, cutting deployment costs 50% and improving uptime; 50%+ dev cost reduction via offshore team</li>
+        </ul>
+      </div>
+      <div class="role">
+        <h3>Enterprise Consultant</h3>
+        <p class="company">Manulife / John Hancock</p>
+        <p class="dateline"><span class="ic ic-cal"></span>06/2021 &ndash; 06/2025 <span class="ic ic-pin-b"></span>Boston / Toronto, USA / Canada</p>
+        <ul>
+          <li>Led multi-year tech strategy transformation with OKR-driven portfolio planning</li>
+          <li>Realigned fraud prevention efforts at John Hancock, delivering $30M+ in annual savings and doubling throughput</li>
+          <li>Designed a CapEx/OpEx reclassification model (17% of OpEx reclassified) that eliminated timesheets</li>
+        </ul>
+      </div>
+      <div class="role">
+        <h3>Founder and CTO</h3>
+        <p class="company">Infaque</p>
+        <p class="dateline"><span class="ic ic-cal"></span>01/2021 &ndash; Present <span class="ic ic-pin-b"></span>Toronto, Canada &amp; Lahore, Pakistan</p>
+        <ul>
+          <li>Founder/CTO: built the SaaS product from scratch (React, Node.js, Firebase, multi-cloud) &mdash; $0 to $50K+ ARR across 20+ clients</li>
+          <li>Built a 100% remote engineering team with standardized CI/CD, access policies, and observability</li>
+          <li>Founded the offshore development arm, reducing client development costs by over 70%</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="footer">1/2</div>
+</div>
+
+<!-- ==================== PAGE 2 ==================== -->
+<div class="page">
+  <div class="row">
+    <div class="side">Work<br>Experience</div>
+    <div class="main">
+      <div class="role">
+        <h3>Director &amp; Head of Business Agility COE</h3>
+        <p class="company">Royal Bank of Canada</p>
+        <p class="dateline"><span class="ic ic-cal"></span>06/2018 &ndash; 06/2021 <span class="ic ic-pin-b"></span>Toronto, Canada</p>
+        <ul>
+          <li>Led enterprise-wide business agility transformation across 4 divisions at one of Canada&rsquo;s largest banks</li>
+          <li>Drove adoption of prioritization and work visualization practices among 20% of RBC executives within two years</li>
+          <li>Delivered productivity gains exceeding 50% in four key business units</li>
+        </ul>
+      </div>
+      <div class="role">
+        <h3>FICC Architect &amp; Agile Adoption</h3>
+        <p class="company">RBC Capital Markets</p>
+        <p class="dateline"><span class="ic ic-cal"></span>06/2017 &ndash; 06/2018 <span class="ic ic-pin-b"></span>Toronto, Canada</p>
+        <ul>
+          <li>Increased development efficiency 35% across Fixed Income, Currencies, and Commodities technology</li>
+          <li>Integrated Jira with Jenkins, Ansible, ELK stack, and automated testing tools</li>
+          <li>Cut downtime and manual effort 25% across 20 applications, accelerating time to market</li>
+        </ul>
+      </div>
+      <div class="role">
+        <h3>Director &amp; Regional Head of FX Tech</h3>
+        <p class="company">RBC Capital Markets</p>
+        <p class="dateline"><span class="ic ic-cal"></span>10/2016 &ndash; 06/2017 <span class="ic ic-pin-b"></span>Toronto, Canada</p>
+        <ul>
+          <li>Managed a $22MM technology budget with full P&amp;L ownership</li>
+          <li>Saved $5MM in vendor expenses and generated $3MM in recurring revenue from EM FX forwards</li>
+          <li>Modernized the FX stack and doubled quarterly release cadence via Agile and OKRs</li>
+        </ul>
+      </div>
+      <div class="role">
+        <h3>Head of FX Technology</h3>
+        <p class="company">BMO Capital Markets</p>
+        <p class="dateline"><span class="ic ic-cal"></span>01/2014 &ndash; 02/2016 <span class="ic ic-pin-b"></span>Toronto, Canada</p>
+        <ul>
+          <li>Led 60+ professionals with a $17MM yearly budget</li>
+          <li>Replaced the 1970s-era IBUK operations system and brought BMO to full CLS membership</li>
+          <li>Modernized the FX stack on Wall Street Systems 5.0, cutting operations costs</li>
+        </ul>
+      </div>
+      <div class="role">
+        <h3>Software Development Manager &middot; Team Lead &middot; Java Developer</h3>
+        <p class="company">BMO Capital Markets</p>
+        <p class="dateline"><span class="ic ic-cal"></span>2008 &ndash; 2014 <span class="ic ic-pin-b"></span>Toronto, Canada</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="side">Education</div>
+    <div class="main">
+      <div class="edu">
+        <h3>Electrical and Computer Engineering | Masters of Applied Science and Engineering</h3>
+        <p class="school">University of Toronto</p>
+        <p class="dateline"><span class="ic ic-cal"></span>2003 &ndash; 2006 <span class="ic ic-pin-b"></span>Toronto, Canada</p>
+      </div>
+      <div class="edu">
+        <h3>Electrical and Computer Engineering | Bachelors of Applied Science and Engineering</h3>
+        <p class="school">University of Toronto</p>
+        <p class="dateline"><span class="ic ic-cal"></span>1999 &ndash; 2003 <span class="ic ic-pin-b"></span>Toronto, Canada</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="side">Certificates</div>
+    <div class="main">
+      <div class="cert"><h3>Convolutional Neural Networks in TensorFlow</h3><p class="org">Coursera</p></div>
+      <div class="cert"><h3>Natural Language Processing in TensorFlow</h3><p class="org">Coursera</p></div>
+      <div class="cert"><h3>Multiplatform Mobile App Development with Web Technologies</h3><p class="org">Coursera</p></div>
+      <div class="cert"><h3>Certified SAFe&reg; 4 Program Consultant</h3><p class="org">Scaled Agile Inc</p></div>
+      <div class="cert"><h3>Certified Scrum@Scale Practitioner</h3><p class="org">Scrum Inc.</p></div>
+    </div>
+  </div>
+  <div class="footer">2/2</div>
+</div>
+
+</body>
+</html>
